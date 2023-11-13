@@ -15,7 +15,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MenuComponent } from './menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
-
+import { RandomComponent } from './random/random.component';
 
 
 @NgModule({
@@ -30,8 +30,9 @@ import {AppRoutingModule} from './app-routing.module';
     PandoraBoxComponent,
     HomeComponent,
     NotFoundComponent,
-    MenuComponent
-  ],
+    MenuComponent,
+    RandomComponent,
+    ],
   imports: [
     BrowserModule,
     FormsModule,
