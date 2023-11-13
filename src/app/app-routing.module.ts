@@ -18,8 +18,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     RouterModule.forRoot(routes),
+    CommonModule,
   ],
   exports: [
     RouterModule
