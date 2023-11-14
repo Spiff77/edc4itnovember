@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {User} from '../model/user.model';
 
 @Component({
   selector: 'app-template-form',
@@ -7,8 +8,22 @@ import { Component } from '@angular/core';
 })
 export class TemplateFormComponent {
 
-  getFormData(data: {[key: string]: any }){
-    console.log(data)
+  formSubmitted = false;
+
+  user:User = {
+    id: 0,
+    firstname: 'fgsdfgd',
+    age: 0,
+    address:{
+      streetname: '',
+      city: ''
+    },
+    ishostedboarding: false,
+  }
+
+  getFormData(){
+    this.formSubmitted = true;
+    console.log(this.user)
   }
 
 }

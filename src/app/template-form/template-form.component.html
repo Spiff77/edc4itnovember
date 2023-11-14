@@ -1,6 +1,6 @@
 <h1>Add User</h1>
 
-<ul>
+<ul *ngIf="formSubmitted">
     <li [hidden]="fnfield.valid || fnfield.pristine"
          class="alert alert-danger">
       First Name is required
@@ -9,20 +9,26 @@
         class="alert alert-danger">
       First Name is required
     </li>
+
+  <!-- Or another way to do bypassing template variable -->
+  <li [hidden]="userForm.form.get('firstname')?.valid"
+      class="alert alert-danger">
+    First Name is required
+  </li>
 </ul>
-<form #userForm="ngForm" (ngSubmit)="getFormData(userForm.form.value)">
+<form #userForm="ngForm" (ngSubmit)="getFormData()">
 
 
   <div>
     <label for="firstname">Firstname</label>
-    <input type="text" id="firstname" name="firstname" ngModel  #fnfield="ngModel" required>
+    <input type="text" id="firstname" name="firstname" [(ngModel)]="user.firstname"  #fnfield="ngModel" required>
   </div>
   <div>
-    <label for="lastname">Lastname</label>
-    <input type="text" text="" id="lastname" name="lastname" ngModel #lnfield="ngModel" required>
+    <label for="age">age</label>
+    <input type="number" text="" id="age" name="age" [(ngModel)]="user.age" ngModel #lnfield="ngModel" required>
   </div>
-  <fieldset ngModelGroup="address">
-    <input type="text" name="streename" ngModel>
+  <fieldset ngModelGroup="address" *ngIf="user.address">
+    <input type="text" id="streetname" name="streetname" [(ngModel)]="user.address.streetname"  #fnfield="ngModel" required>
     <input type="number" name="streetnumber" ngModel>
   </fieldset>
   <button type="submit">Send data</button>
