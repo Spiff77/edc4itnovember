@@ -6,12 +6,12 @@
     <li>{{user?.address?.streetname}}</li>
     <li>{{user?.address?.city}}</li>
   </ul>
-  <input type="text" [(ngModel)]="name" #thename (keyup)="0">
+  <input type="text" [(ngModel)]="name" #thename (keyup)="0" [ngClass]="computeInputClass()"  >
   {{ thename.value}}
   <button (click)="changeCityName()">Change city</button>
 
 
-  <input #filterBox (keyup.enter)="showMeTheValue(filterBox.value)"/>
+  <input #filterBox (keyup.enter)="showMeTheValue(filterBox.value)" >
 
   <table>
     <tr>

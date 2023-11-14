@@ -3,3 +3,19 @@
   background-color: #c4ffc4;
   display: block;
 }
+
+
+.valid{
+  color:green;
+  border-color: green;
+}
+
+.pending{
+  color:orange;
+  border-color: orange;
+}
+
+.error{
+  color:red;
+  border-color: red;
+}

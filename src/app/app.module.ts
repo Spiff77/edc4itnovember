@@ -11,11 +11,11 @@ import { UserListComponent } from './user-list/user-list.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PandoraBoxComponent } from './pandora-box/pandora-box.component';
 import { HomeComponent } from './home/home.component';
-import {RouterModule, Routes} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MenuComponent } from './menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
 import { RandomComponent } from './random/random.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 
 @NgModule({
@@ -32,6 +32,7 @@ import { RandomComponent } from './random/random.component';
     NotFoundComponent,
     MenuComponent,
     RandomComponent,
+    TemplateFormComponent,
     ],
   imports: [
     BrowserModule,

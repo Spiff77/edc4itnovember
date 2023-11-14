@@ -1,0 +1,30 @@
+<h1>Add User</h1>
+
+<ul>
+    <li [hidden]="fnfield.valid || fnfield.pristine"
+         class="alert alert-danger">
+      First Name is required
+    </li>
+    <li [hidden]="lnfield.valid || lnfield.pristine"
+        class="alert alert-danger">
+      First Name is required
+    </li>
+</ul>
+<form #userForm="ngForm" (ngSubmit)="getFormData(userForm.form.value)">
+
+
+  <div>
+    <label for="firstname">Firstname</label>
+    <input type="text" id="firstname" name="firstname" ngModel  #fnfield="ngModel" required>
+  </div>
+  <div>
+    <label for="lastname">Lastname</label>
+    <input type="text" text="" id="lastname" name="lastname" ngModel #lnfield="ngModel" required>
+  </div>
+  <fieldset ngModelGroup="address">
+    <input type="text" name="streename" ngModel>
+    <input type="number" name="streetnumber" ngModel>
+  </fieldset>
+  <button type="submit">Send data</button>
+
+</form>

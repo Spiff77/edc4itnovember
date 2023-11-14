@@ -59,4 +59,8 @@ export class PandoraBoxComponent {
   trackByStudentId(index: number, student: Student): number{
     return student.id
   }
+
+  computeInputClass() {
+    return {valid: this.name.length >=6, pending: this.name.length > 3 &&  this.name.length < 6, error: this.name.length <= 3}
+    }
 }
