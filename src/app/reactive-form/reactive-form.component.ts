@@ -16,7 +16,7 @@ export class ReactiveFormComponent implements OnInit{
     // We don't put anyhthing here
   }
 
-
+// add this route: add-reactive
   ngOnInit(): void {
     // Things I want to do when my component is loaded have to be done here
     this.myform = this.fb.group({

@@ -8,12 +8,14 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {PandoraBoxComponent} from './pandora-box/pandora-box.component';
 import {TemplateFormComponent} from './template-form/template-form.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
+import {MyTableComponent} from './my-table/my-table.component';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'users', component: UserListComponent},
   {path: 'everything', component: PandoraBoxComponent},
+  {path: 'table', component: MyTableComponent},
   {path: 'form/template', component: TemplateFormComponent},
   {path: 'form/reactive', component: ReactiveFormComponent},
   {path: 'home', component: HomeComponent},

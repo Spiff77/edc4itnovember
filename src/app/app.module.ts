@@ -17,6 +17,11 @@ import {AppRoutingModule} from './app-routing.module';
 import { RandomComponent } from './random/random.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { MyTableComponent } from './my-table/my-table.component';
+import { MyRowComponent } from './my-row/my-row.component';
+import { HighlightDirective } from './highlight.directive';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -35,6 +40,11 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     RandomComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
+    MyTableComponent,
+    MyRowComponent,
+    HighlightDirective,
+    ProductListComponent,
+    ProductComponent,
     ],
   imports: [
     BrowserModule,
