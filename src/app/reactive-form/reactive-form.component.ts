@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, NonNullableFormBuilder, Validators} from '@angular/forms';
 import {User} from '../model/user.model';
 
 @Component({
@@ -12,23 +12,22 @@ export class ReactiveFormComponent implements OnInit{
   myform!: FormGroup;
   formSubmitted = false;
 
-  constructor(private fb: FormBuilder) { // Will be used only for injection
+  constructor(private fb: NonNullableFormBuilder) { // Will be used only for injection
     // We don't put anyhthing here
   }
 
 
   ngOnInit(): void {
     // Things I want to do when my component is loaded have to be done here
-    //before
-    this.myform = new FormGroup({
-      firstname: new FormControl('Tom', Validators.required),
-      age: new FormControl(0),
-    })
-
-    //after
     this.myform = this.fb.group({
-      firstname: ['Tom', Validators.required],
-      age: 0
+      id: 0,
+      firstname: ['Tom', [Validators.required, Validators.minLength(3)]],
+      age: 0,
+      address: this.fb.group({
+        id:0,
+        streetname: '',
+        streetnumber:''
+      })
     })
   }
 
