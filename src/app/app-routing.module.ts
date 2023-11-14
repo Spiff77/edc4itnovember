@@ -7,7 +7,7 @@ import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {PandoraBoxComponent} from './pandora-box/pandora-box.component';
 import {TemplateFormComponent} from './template-form/template-form.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'users', component: UserListComponent},
   {path: 'everything', component: PandoraBoxComponent},
   {path: 'form/template', component: TemplateFormComponent},
-  {path: 'form/reactive', component: ReactiveFormsModule},
+  {path: 'form/reactive', component: ReactiveFormComponent},
   {path: 'home', component: HomeComponent},
   {path: '**', component: NotFoundComponent},
 ]

@@ -1,1 +1,17 @@
-<p>reactive-form works!</p>
+<h1>Add User (in a reactive way)</h1>
+<ul *ngIf="formSubmitted && !myform.valid">
+  <li *ngIf="myform.get('firstname')?.errors?.['required']">The firstname is required</li>
+</ul>
+
+<form [formGroup]="myform" (ngSubmit)="submitValue()">
+  <div>
+    <label for="firstname">firstname</label>
+    <input type="text" id="firstname" formControlName="firstname">
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input type="number" id="age" formControlName="age">
+  </div>
+  <button type="submit">OK</button>
+  <button type="reset">Reset</button>
+</form>
