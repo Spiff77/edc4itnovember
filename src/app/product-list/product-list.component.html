@@ -1,1 +1,6 @@
-<app-product *ngFor="let p of products" [product]="p" ></app-product>
+<h1>Product List</h1>
+<div *ngIf="selectedProduct">
+ <span (click)="selectedProduct = undefined">[x]</span> You have selected: {{selectedProduct}}
+</div>
+<app-product *ngFor="let p of products" [product]="p" (out)="getProductFromChildren($event)" ></app-product>
+

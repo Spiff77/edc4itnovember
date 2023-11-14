@@ -8,10 +8,16 @@ import {Product} from '../model/product.model';
 })
 export class ProductListComponent {
 
+  selectedProduct: string|undefined
+
   products: Product[] = [
     {id: 1, label: 'The beatles', price: 10},
     {id: 2, label: 'Motorhead', price: 15},
     {id: 3, label: 'Chantal Goya', price: 25}
   ]
+
+  getProductFromChildren(label: string){
+    this.selectedProduct = label
+  }
 
 }
