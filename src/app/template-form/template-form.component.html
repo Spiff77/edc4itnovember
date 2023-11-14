@@ -17,11 +17,9 @@
   </li>
 </ul>
 <form #userForm="ngForm" (ngSubmit)="getFormData()">
-
-
   <div>
     <label for="firstname">Firstname</label>
-    <input type="text" id="firstname" name="firstname" [(ngModel)]="user.firstname"  #fnfield="ngModel" required>
+    <input type="text" id="firstname" name="firstname" [(ngModel)]="user.firstname" ngModel  #fnfield="ngModel" required>
   </div>
   <div>
     <label for="age">age</label>

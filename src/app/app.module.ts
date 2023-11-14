@@ -16,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import {AppRoutingModule} from './app-routing.module';
 import { RandomComponent } from './random/random.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     MenuComponent,
     RandomComponent,
     TemplateFormComponent,
+    ReactiveFormComponent,
     ],
   imports: [
     BrowserModule,
