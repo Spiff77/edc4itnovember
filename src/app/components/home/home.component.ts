@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   data = ['Logan', 'Kiran', 'Zach', 'Dan', 'Emily']
 
-
   constructor(public cs: CountService) {
   }
 
@@ -79,3 +78,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
 }
+/*
+   App
+    /\
+  A   C
+ /     \
+B       D
+
+
+ */

@@ -21,6 +21,10 @@ import { MyTableComponent } from './components/my-table/my-table.component';
 import { MyRowComponent } from './components/my-row/my-row.component';
 import {ProductModule} from './module/product/product.module';
 import {NameService} from './name.service';
+import { AComponent } from './components/a/a.component';
+import { BComponent } from './components/b/b.component';
+import { CComponent } from './components/c/c.component';
+import { DComponent } from './components/d/d.component';
 
 
 @NgModule({
@@ -41,6 +45,10 @@ import {NameService} from './name.service';
     ReactiveFormComponent,
     MyTableComponent,
     MyRowComponent,
+    AComponent,
+    BComponent,
+    CComponent,
+    DComponent,
     ],
   imports: [
     BrowserModule,
