@@ -86,4 +86,21 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 B       D
 
 
- */
+        /*********
+         *
+         *
+         * ---------------------
+         * Menu   [empty all recipes] [fetch all recipes]
+         * --------------------
+         *
+         * []    []    []
+         *
+         * []    []    []
+         *
+         * []    []    []
+         */
+
+// recipes = []
+// recipes = [..] <-- with your services
+
+
