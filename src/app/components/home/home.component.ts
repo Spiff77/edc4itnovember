@@ -12,7 +12,7 @@ import {
   takeWhile,
   fromEvent,
   audit,
-  auditTime
+  auditTime, mergeMap, switchMap, concat, concatMap, exhaustMap
 } from 'rxjs';
 
 @Component({
@@ -56,8 +56,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit(): void {
     fromEvent<MouseEvent>(this.mydiv.nativeElement,"click")
       .pipe(
-        map((e: MouseEvent) =>  ({x: e.clientX, y: e.clientY})),
-        auditTime(1000))
+        mergeMap(v => // try with switchMap, exhaustMat and concatMap to see the diff
+          interval(1000).pipe(
+            take(5)
+          )
+        )
+      )
       .subscribe(v => console.log(v))
   }
 
