@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Person} from '../model/person.model';
 import {Student} from '../model/student.model';
 import {User} from '../model/user.model';
+import {NameService} from '../../name.service';
+import {CountService} from '../../count.service';
 
 @Component({
   selector: 'app-pandora-box',
   templateUrl: './pandora-box.component.html',
   styleUrls: ['./pandora-box.component.scss']
 })
-export class PandoraBoxComponent {
+export class PandoraBoxComponent implements OnInit{
   firstName = 'Thomas'
 
   p = new Person('Thomas', 38)
@@ -36,12 +38,11 @@ export class PandoraBoxComponent {
   }
   s:Student = {id: 12, firstname: 'Tom', lastname: 'Tom'}
 
-  constructor() {
+  constructor(private ns: NameService, public cs: CountService) {}
 
-    console.log(this.p.firstname)
+  ngOnInit(): void {
+    this.name = this.cs.title
   }
-
-
   isAdult(): boolean{
     return this.user.age >= 18
   }
@@ -63,4 +64,6 @@ export class PandoraBoxComponent {
   computeInputClass() {
     return {valid: this.name.length >=6, pending: this.name.length > 3 &&  this.name.length < 6, error: this.name.length <= 3}
     }
+
+
 }

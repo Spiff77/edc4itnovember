@@ -20,6 +20,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { MyTableComponent } from './components/my-table/my-table.component';
 import { MyRowComponent } from './components/my-row/my-row.component';
 import {ProductModule} from './module/product/product.module';
+import {NameService} from './name.service';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import {ProductModule} from './module/product/product.module';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [NameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
