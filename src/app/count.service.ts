@@ -6,7 +6,5 @@ import { Injectable } from '@angular/core';
 export class CountService {
 
   title = 'My awesome counter'
-
-
   constructor() { }
 }
