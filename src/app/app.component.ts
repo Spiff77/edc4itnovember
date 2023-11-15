@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Person} from './model/person.model';
-import {User} from './model/user.model';
-import {Student} from './model/student.model';
+import {Person} from './components/model/person.model';
+import {User} from './components/model/user.model';
+import {Student} from './components/model/student.model';
 
 @Component({
   selector: 'app-root',
