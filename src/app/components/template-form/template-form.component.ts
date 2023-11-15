@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {User} from '../model/user.model';
+import {User} from '../../model/user.model';
 
 @Component({
   selector: 'app-template-form',
@@ -12,10 +12,10 @@ export class TemplateFormComponent {
 
   user:User = {
     id: 0,
-    firstname: 'fgsdfgd',
+    username: 'fgsdfgd',
     age: 0,
     address:{
-      streetname: '',
+      street: '',
       city: ''
     },
     ishostedboarding: false,

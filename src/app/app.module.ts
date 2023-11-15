@@ -25,6 +25,7 @@ import { AComponent } from './components/a/a.component';
 import { BComponent } from './components/b/b.component';
 import { CComponent } from './components/c/c.component';
 import { DComponent } from './components/d/d.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { DComponent } from './components/d/d.component';
     BrowserModule,
     FormsModule,
     ProductModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],

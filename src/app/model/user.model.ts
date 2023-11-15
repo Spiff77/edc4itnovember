@@ -1,9 +1,9 @@
 export interface User{
   id: number,
-  firstname: string,
+  username: string,
   age: number,
   address?: {
-    streetname: string,
+    street: string,
     city: string
   }
   ishostedboarding?: boolean,

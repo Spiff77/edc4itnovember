@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Person} from '../model/person.model';
-import {Student} from '../model/student.model';
-import {User} from '../model/user.model';
+import {Person} from '../../model/person.model';
+import {Student} from '../../model/student.model';
+import {User} from '../../model/user.model';
 import {NameService} from '../../name.service';
 import {CountService} from '../../count.service';
 
@@ -27,10 +27,10 @@ export class PandoraBoxComponent implements OnInit{
 
   user:User = {
     id: 10,
-    firstname: 'Thomas',
+    username: 'Thomas',
     age: 10,
     address:{
-      streetname: 'road of trees',
+      street: 'road of trees',
       city: 'Washington'
     },
     ishostedboarding: false,

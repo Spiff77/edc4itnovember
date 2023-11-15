@@ -14,7 +14,14 @@ export class DComponent implements  OnInit{
   }
 
   ngOnInit(): void {
-    this.ts.evt.subscribe(v =>  this.text = v);
+    this.ts.evt.subscribe(v => {
+     if(v == 'EMPTY'){
+      // empty the array
+     } else{
+
+     }
+     this.text = v
+    });
   }
 
 

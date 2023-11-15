@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, NonNullableFormBuilder, Validators} from '@angular/forms';
-import {User} from '../model/user.model';
+import {User} from '../../model/user.model';
 
 @Component({
   selector: 'app-reactive-form',

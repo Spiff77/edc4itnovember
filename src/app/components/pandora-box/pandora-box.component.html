@@ -10,7 +10,7 @@
 
 
   <ul [hidden]="isAdult()">
-    <li>{{user?.address?.streetname}}</li>
+    <li>{{user?.address?.street}}</li>
     <li>{{user?.address?.city}}</li>
   </ul>
   <input type="text" [(ngModel)]="name" #thename (keyup)="0" [ngClass]="computeInputClass()"  >
