@@ -34,6 +34,7 @@ import { PlayDialogComponent } from './play-dialog/play-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import {A11yModule} from '@angular/cdk/a11y';
+import { HowAreYouDialogComponent } from './how-are-you-dialog/how-are-you-dialog.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import {A11yModule} from '@angular/cdk/a11y';
     PrimaryComponent,
     SecondaryComponent,
     PlayDialogComponent,
+    HowAreYouDialogComponent,
     ],
   imports: [
     BrowserModule,
