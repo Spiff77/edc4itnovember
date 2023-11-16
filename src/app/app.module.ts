@@ -28,7 +28,6 @@ import { DComponent } from './components/d/d.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PrimaryComponent } from './components/primary/primary.component';
 import { SecondaryComponent } from './components/secondary/secondary.component';
-import {SandoxModule} from './module/sandox/sandox.module';
 
 
 @NgModule({
@@ -63,7 +62,6 @@ import {SandoxModule} from './module/sandox/sandox.module';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    SandoxModule
   ],
   providers: [NameService],
   bootstrap: [AppComponent]

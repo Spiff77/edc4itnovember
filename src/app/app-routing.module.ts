@@ -13,7 +13,6 @@ import {PrimaryComponent} from './components/primary/primary.component';
 import {AComponent} from './components/a/a.component';
 import {CComponent} from './components/c/c.component';
 import {SecondaryComponent} from './components/secondary/secondary.component';
-import {SandoxModule} from './module/sandox/sandox.module';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
@@ -21,7 +20,7 @@ const routes: Routes = [
   {path: 'form/template', component: TemplateFormComponent},
   {path: 'form/reactive', component: ReactiveFormComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'sandbox', loadChildren: () => SandoxModule},
+  {path: 'sandbox', loadChildren: () => import('./module/sandox/sandox.module').then(v => v.SandoxModule)},
   {path: 'primary', component: PrimaryComponent, children: [
       {path: 'a', component: AComponent}
   ]},
