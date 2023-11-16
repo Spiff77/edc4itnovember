@@ -32,7 +32,7 @@ export class UserService {
    * Material dialog component (using the component way)
    *  -  in recipe detail, add a delete button. It will open the dialog box.
    *  -  if the user click on cancel, we close the dialog, nothing happen
-   *  -  if yes, we call the delete service and if the answer is "true", we redirect tot the recipe list. // recipe-detail-component
+   *  -  if yes, we call the delete service and if the answer is "true", we redirect to the recipe list. // recipe-detail-component
    *
    */
 
