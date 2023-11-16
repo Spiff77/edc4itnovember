@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TextService} from '../../text.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-b',
@@ -8,11 +9,11 @@ import {TextService} from '../../text.service';
 })
 export class BComponent {
 
-  constructor(private ts: TextService) {
+  constructor(private ts: TextService, private router: Router) {
   }
 
   changeText() {
-    this.ts.emitValue('I changed you!');
+    this.router.navigate(['/users'])
   }
 
 }
