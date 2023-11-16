@@ -1,0 +1,17 @@
+<p>play-dialog works!</p>
+<input [(ngModel)]="name" type="text">
+
+
+<ng-template let-data #dialog>
+  <h1 mat-dialog-title>Heyyy</h1>
+  <div mat-dialog-content>
+    How are you today {{data.name}}?
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close="GOOD">Good :D</button>
+    <button mat-raised-button color="warn" mat-dialog-close="BAD">Bad :(</button>
+  </div>
+</ng-template>
+
+
+<button (click)="openDialog()">OPEN</button>

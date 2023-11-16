@@ -28,6 +28,12 @@ import { DComponent } from './components/d/d.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PrimaryComponent } from './components/primary/primary.component';
 import { SecondaryComponent } from './components/secondary/secondary.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { PlayDialogComponent } from './play-dialog/play-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButton, MatButtonModule} from '@angular/material/button';
+import {A11yModule} from '@angular/cdk/a11y';
 
 
 @NgModule({
@@ -54,6 +60,7 @@ import { SecondaryComponent } from './components/secondary/secondary.component';
     DComponent,
     PrimaryComponent,
     SecondaryComponent,
+    PlayDialogComponent,
     ],
   imports: [
     BrowserModule,
@@ -62,6 +69,12 @@ import { SecondaryComponent } from './components/secondary/secondary.component';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    /*MATERIAL BELOW*/
+    MatCardModule,
+    MatDialogModule,
+    MatButtonModule,
+    A11yModule
   ],
   providers: [NameService],
   bootstrap: [AppComponent]

@@ -21,7 +21,7 @@ export class UserService {
 
   addUser(u: User): Observable<User>{
     return this.http.post<User>('https://jsonplaceholder.typicode.com/users', u)
-
   }
+
 
 }

@@ -13,9 +13,11 @@ import {PrimaryComponent} from './components/primary/primary.component';
 import {AComponent} from './components/a/a.component';
 import {CComponent} from './components/c/c.component';
 import {SecondaryComponent} from './components/secondary/secondary.component';
+import {PlayDialogComponent} from './play-dialog/play-dialog.component';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
+  {path: 'dialog', component: PlayDialogComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'form/template', component: TemplateFormComponent},
   {path: 'form/reactive', component: ReactiveFormComponent},
