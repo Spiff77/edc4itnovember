@@ -26,6 +26,8 @@ import { BComponent } from './components/b/b.component';
 import { CComponent } from './components/c/c.component';
 import { DComponent } from './components/d/d.component';
 import {HttpClientModule} from '@angular/common/http';
+import { PrimaryComponent } from './primary/primary.component';
+import { SecondaryComponent } from './secondary/secondary.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import {HttpClientModule} from '@angular/common/http';
     BComponent,
     CComponent,
     DComponent,
+    PrimaryComponent,
+    SecondaryComponent,
     ],
   imports: [
     BrowserModule,

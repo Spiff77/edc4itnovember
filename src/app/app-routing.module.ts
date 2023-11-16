@@ -9,6 +9,10 @@ import {PandoraBoxComponent} from './components/pandora-box/pandora-box.componen
 import {TemplateFormComponent} from './components/template-form/template-form.component';
 import {ReactiveFormComponent} from './components/reactive-form/reactive-form.component';
 import {MyTableComponent} from './components/my-table/my-table.component';
+import {PrimaryComponent} from './primary/primary.component';
+import {AComponent} from './components/a/a.component';
+import {CComponent} from './components/c/c.component';
+import {SecondaryComponent} from './secondary/secondary.component';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
@@ -19,6 +23,12 @@ const routes: Routes = [
   {path: 'form/template', component: TemplateFormComponent},
   {path: 'form/reactive', component: ReactiveFormComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'primary', component: PrimaryComponent, children: [
+      {path: 'a', component: AComponent}
+  ]},
+  {path: 'secondary', component: SecondaryComponent, children: [
+      {path: 'c', component: CComponent}
+  ]},
   {path: '**', component: NotFoundComponent},
 ]
 
