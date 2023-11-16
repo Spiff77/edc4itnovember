@@ -9,20 +9,19 @@ import {PandoraBoxComponent} from './components/pandora-box/pandora-box.componen
 import {TemplateFormComponent} from './components/template-form/template-form.component';
 import {ReactiveFormComponent} from './components/reactive-form/reactive-form.component';
 import {MyTableComponent} from './components/my-table/my-table.component';
-import {PrimaryComponent} from './primary/primary.component';
+import {PrimaryComponent} from './components/primary/primary.component';
 import {AComponent} from './components/a/a.component';
 import {CComponent} from './components/c/c.component';
-import {SecondaryComponent} from './secondary/secondary.component';
+import {SecondaryComponent} from './components/secondary/secondary.component';
+import {SandoxModule} from './module/sandox/sandox.module';
 
 const routes: Routes = [
   {path: 'posts', component: PostListComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'users', component: UserListComponent},
-  {path: 'everything', component: PandoraBoxComponent},
-  {path: 'table', component: MyTableComponent},
   {path: 'form/template', component: TemplateFormComponent},
   {path: 'form/reactive', component: ReactiveFormComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'sandbox', loadChildren: () => SandoxModule},
   {path: 'primary', component: PrimaryComponent, children: [
       {path: 'a', component: AComponent}
   ]},
