@@ -16,6 +16,7 @@ export class DComponent implements  OnInit{
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe( v => {
+      const name = this.activatedRoute.snapshot.params['name'];
       if(v.get('name')) {
         this.text =  v.get('name') ?? ""
       }
