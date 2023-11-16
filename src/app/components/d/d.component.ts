@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TextService} from '../../text.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-d',
@@ -10,18 +11,15 @@ export class DComponent implements  OnInit{
 
   text= 'Hello'
 
-  constructor(private ts: TextService) {
+  constructor(private activatedRoute: ActivatedRoute ) {
   }
 
   ngOnInit(): void {
-    this.ts.evt.subscribe(v => {
-     if(v == 'EMPTY'){
-      // empty the array
-     } else{
-
-     }
-     this.text = v
-    });
+    this.activatedRoute.paramMap.subscribe( v => {
+      if(v.get('name')) {
+        this.text =  v.get('name') ?? ""
+      }
+    })
   }
 
 

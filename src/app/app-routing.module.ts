@@ -26,7 +26,8 @@ const routes: Routes = [
       {path: 'a', component: AComponent}
   ]},
   {path: 'secondary', component: SecondaryComponent, children: [
-      {path: 'c', component: CComponent}
+      {path: 'c', component: CComponent},
+      {path: 'c/:name', component: CComponent}
   ]},
   {path: '**', component: NotFoundComponent},
 ]
